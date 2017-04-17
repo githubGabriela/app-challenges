@@ -1,0 +1,14 @@
+<menu></menu>
+
+<!--<a href="home"> {{ 'Home' | translate}}</a>-->
+<!--<a href="about">{{ 'About' | translate}}</a>-->
+
+
+<div style="float: right">
+  <ul>
+    <li (click)="changeLanguage('en')">EN</li>
+    <li (click)="changeLanguage('fr')">FR</li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
