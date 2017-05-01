@@ -1,0 +1,18 @@
+<div class="carousel-container">
+	<img src="../../app/assets/img/left.png"  (click)="slideLeft()">
+
+	<div class="carousel" #carousel>
+		<div class="day-container" *ngFor="let data of week; let i=index;"
+		[style.transform]="'translateX(' + translatePercentage + '%)'"
+		[class.active]="i === currentIndex">
+
+			<div class="day-title"> {{data.day}}</div>
+			<div *ngFor="let oneItem of data.items">
+				<app-item [item]="oneItem"></app-item>
+			</div>
+		</div>
+	</div>
+
+	<img src="../../app/assets/img/right.png" (click)="slideRight()">
+</div>
+

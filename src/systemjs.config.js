@@ -22,10 +22,10 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-      'ng2-translate' : 'npm:ng2-translate/bundles/ng2-translate.umd.js',
 
       // other libraries
       'rxjs':                      'npm:rxjs',
+      'ng2-translate'             : 'npm:ng2-translate/bundles/ng2-translate.umd.js',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension

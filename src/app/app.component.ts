@@ -1,19 +1,14 @@
 import { Component } from '@angular/core';
-import { TranslateService } from 'ng2-translate';
 
 @Component({
   selector: 'my-app',
-  template: ` <app-header></app-header>`,
+  template: ` <component-with-carousel></component-with-carousel> <router-outlet></router-outlet>`,
 })
-// <router-outlet></router-outlet>
+
 
 export class AppComponent {
 
 
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
-
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('en');
+  constructor() {
   }
 }

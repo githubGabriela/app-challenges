@@ -8,13 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
-//px imports
 var http_1 = require("@angular/http");
 var ng2_translate_1 = require("ng2-translate");
+//px imports
+var app_router_1 = require("./app.router");
 var app_component_1 = require("./app.component");
+var not_found_component_1 = require("./access/not-found.component");
 var index_1 = require("./header/index");
-var index_2 = require("./home/index");
-var index_3 = require("./about/index");
+var menu_component_1 = require("./menu/menu.component");
+var component_with_carousel_component_1 = require("./component-with-carousel/component-with-carousel.component");
+var carousel_component_1 = require("./carousel/carousel.component");
+var item_component_1 = require("./carousel/item/item.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,21 +31,27 @@ AppModule = __decorate([
             router_1.RouterModule,
             ng2_translate_1.TranslateModule.forRoot({
                 provide: ng2_translate_1.TranslateLoader,
-                useFactory: function (http) { return new ng2_translate_1.TranslateStaticLoader(http, '/assets/i18n', '.json'); },
+                useFactory: (createTranslateLoader),
                 deps: [http_1.Http]
-            })
-        ],
-        providers: [
-            ng2_translate_1.TranslateService
+            }),
+            app_router_1.AppRoutes,
         ],
         declarations: [
-            app_component_1.AppComponent,
+            menu_component_1.MenuComponent,
             index_1.HeaderComponent,
-            index_2.HomeComponent,
-            index_3.AboutComponent
+            not_found_component_1.NotFoundComponent,
+            component_with_carousel_component_1.ComponentWithCarousel,
+            carousel_component_1.CarouselComponent,
+            item_component_1.ItemComponent,
+            app_component_1.AppComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
 exports.AppModule = AppModule;
+function createTranslateLoader(http) {
+    console.log('createTranslateLoader');
+    return new ng2_translate_1.TranslateStaticLoader(http, 'assets/i18n', '.json');
+}
+exports.createTranslateLoader = createTranslateLoader;
 //# sourceMappingURL=app.module.js.map

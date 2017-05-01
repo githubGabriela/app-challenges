@@ -9,21 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ng2_translate_1 = require("ng2-translate");
 var AppComponent = (function () {
-    function AppComponent(translate) {
-        translate.setDefaultLang('en');
-        // the lang to use, if the lang isn't available, it will use the current loader to get them
-        translate.use('en');
+    function AppComponent() {
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: " <app-header></app-header>",
+        template: " <component-with-carousel></component-with-carousel> <router-outlet></router-outlet>",
     }),
-    __metadata("design:paramtypes", [ng2_translate_1.TranslateService])
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
